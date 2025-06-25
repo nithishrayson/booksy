@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "174676975944",
+    "project_id": "bookmarkapp-15116",
+    "storage_bucket": "bookmarkapp-15116.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174676975944:android:1acda21627520f38d1d37d",
+        "android_client_info": {
+          "package_name": "com.example.thisuxnew"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAK5DNGRzeIrqBJvWta15kCHuQiy4eYuic"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
