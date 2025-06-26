@@ -84,12 +84,21 @@ class _AddEditBookmarkScreenState extends State<BookmarkScreen> {
                 controller: urlController,
                 label: "URL",
                 hint: "https://example.com",
-                validator:
-                    (val) =>
-                        val != null && val.startsWith('http')
-                            ? null
-                            : 'Enter a valid URL',
+                validator: (val) {
+                  if (val == null || val.isEmpty) return 'URL is required';
+
+                  final pattern =
+                      r'^https:\/\/[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}(:\d+)?(\/\S*)?$';
+                  final regex = RegExp(pattern);
+
+                  if (!regex.hasMatch(val.trim())) {
+                    return 'Enter a valid URL (e.g. https://example.com)';
+                  }
+
+                  return null;
+                },
               ),
+
               SizedBox(height: 16),
               buildField(
                 controller: noteController,
